@@ -1,13 +1,10 @@
 export async function load({ fetch }: any) {
 	try {
-		const res = await fetch('http://localhost:1337/api/posts?populate=deep');
-		const data = await res.json();
-		console.log('data', data);
-		console.log('body', { body: data });
-		const data2 = data.data;
-		console.log('data2', data2);
+		const response = await fetch('http://localhost:1337/api/posts');
+		const data = await response.json();
+		console.log(data.data);
 
-		return { body: data };
+		return { posts: data?.data };
 	} catch (err) {
 		console.log(`Error: ${err}`);
 	}
