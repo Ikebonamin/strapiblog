@@ -1,4 +1,4 @@
 # strapiblog
 
--> bad fetch request.
-it works correctly with all other endpoints. It seems no t to find strapi´s.
+-> bad fetch request / corrected
+-> Rendering issues. Data won´t render in {#foreach} blocks. Using svelte´s async load + export let data.
