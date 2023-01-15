@@ -3,7 +3,6 @@ export async function load({ fetch }: any) {
 		const response = await fetch('http://localhost:1337/api/posts');
 		const data = await response.json();
 		console.log('data from fetch: ', data);
-
 		return { posts: data?.data };
 	} catch (err) {
 		console.log(`Error: ${err}`);
